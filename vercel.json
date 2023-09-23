@@ -1,13 +1,14 @@
  {
      "builds": [
          {
-             "src": "app.py",
+             "src": "requirements.txt",
              "use": "@vercel/python"
          }
      ],
      "routes": [
+         { "handle": "filesystem" },
          {
-             "src": ".*",
+             "src": "/(.*)",
              "dest": "app.py"
          }
      ]
